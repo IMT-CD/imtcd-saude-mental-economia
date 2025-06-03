@@ -15,11 +15,11 @@
 
 ## Integrantes
 
-- Nome: Erick Eiji Nagao                Ra: 21.00690-3  
-- Nome: Igor Improta Martinez da Silva  Ra: 21.00834-5  
-- Nome: Gabriel Henrique Baca Rado      Ra: 21.01286-5  
-- Nome: Ryuske Hideaki Sato             Ra: 21.00745-4  
-- Nome: Vinicius de Oliveira Berti      Ra: 21.01219-9  
+- Nome: Erick Eiji Nagao - Ra: 21.00690-3  
+- Nome: Igor Improta Martinez da Silva - Ra: 21.00834-5  
+- Nome: Gabriel Henrique Baca Rado - Ra: 21.01286-5  
+- Nome: Ryuske Hideaki Sato - Ra: 21.00745-4  
+- Nome: Vinicius de Oliveira Berti - Ra: 21.01219-9  
 
 ---
 
@@ -217,7 +217,7 @@ A análise exploratória realizada confirma que, no período estudado, **as cris
 
 ## Datafólio
 
-![datafolio](C:\Users\User\Desktop\imt-db\imtcd-saude-mental-economia\datafolio-png.png)
+![datafolio](datafolio-png.png)
 
 ## Referências
 
