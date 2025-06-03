@@ -8,6 +8,7 @@
 - [Metodologia](#metodologia)  
 - [Desenvolvimento](#desenvolvimento)  
 - [Conclusão](#conclusão)  
+- [Datafólio](#datafólio)
 - [Referências](#referências)  
 
 ---
@@ -125,16 +126,87 @@ Investigar a relação entre variáveis econômicas — como desemprego e PIB pe
   - pib_per_capita × suicídio_total = –0,68  
   - inflacao × suicídio_total = –0,22 (quase nulo)  
 
+### Visão 13 – Modelagem de Séries Temporais: previsão da taxa de suicídio (2000–2023)
+
+Para projetar a evolução futura da taxa de suicídio no Brasil, aplicamos uma modelagem ARIMA sobre a série anual de 2000 a 2021:
+
+1. **Teste de estacionariedade (ADF)**
+   - Série original (2000–2021): estatística ADF ≈ 1,98, p-valor ≈ 0,998 → **não estacionária**.  
+   - 1ª diferença (d = 1): estatística ADF ≈ –1,08, p-valor ≈ 0,722 → **não estacionária**.  
+   - 2ª diferença (d = 2): estatística ADF ≈ –1,72, p-valor ≈ 0,422 → **não estacionária**.  
+   - 3ª diferença (d = 3): estatística ADF ≈ –3,99, p-valor ≈ 0,0014 → **estacionária**.
+
+2. **Identificação de (p, d, q)**
+   - Após a terceira diferença (d = 3), analisamos os gráficos de ACF e PACF.  
+   - Autocorrelações significativas nos primeiros lags sugeriram um modelo **ARIMA(1, 3, 1)**.
+
+3. **Ajuste e diagnóstico do ARIMA(1, 3, 1)**
+   - Parâmetros estimados:  
+     - ar.L1 ≈ –0,4579 (p ≈ 0,22)  
+     - ma.L1 ≈ –0,9924 (p ≈ 0,81)  
+     - σ² ≈ 0,0856  
+   - Estatísticas de diagnóstico (resíduos):  
+     - **Ljung–Box (L1) Q ≈ 0,02, p ≈ 0,89** (sem autocorrelação remanescente)  
+     - **Jarque–Bera (JB) ≈ 1,37, p ≈ 0,50** (resíduos com distribuição aproximadamente normal)  
+     - **Teste de heteroscedasticidade (H) ≈ 2,12, p ≈ 0,38** (sem evidência forte de variância não constante)
+
+4. **Previsão para 2022 e 2023**
+   - Com o modelo ARIMA(1, 3, 1) ajustado, projetamos:  
+     - **2022:** 7,34 suicídios por 100 mil habitantes  
+     - **2023:** 7,83 suicídios por 100 mil habitantes  
+   - A projeção indica que a tendência de alta persiste, porém com desaceleração em relação ao forte crescimento observado em 2020–2021.
+
+### Visão 14 – Teste de Correlação de Pearson (Desemprego × Suicídio)
+
+Aplicamos `pearsonr` para medir a associação entre desemprego (%) e taxa de suicídio (por 100 mil habitantes) no Brasil (2013–2023). Após alinhar as séries e remover valores ausentes, obtivemos:
+
+- **Correlação de Pearson:** r ≈ 0,86  
+- **p-valor:** p < 0,001  
+
+**Interpretação prática:**  
+Essa correlação positiva forte significa que, no período analisado, sempre que a taxa de desemprego subiu, a taxa de suicídio também aumentou. Em termos concretos, anos com desemprego acima de 12% (2016–2017, 2020) coincidiram com picos na taxa de suicídio. Assim, medidas que influenciam o desemprego tendem a ter impacto direto na saúde mental da população, elevando o risco de suicídio em períodos de crise.
+
+### Teste de Hipótese para a Correlação de Pearson (Visualização)
+
+Para confirmar estatisticamente a associação entre desemprego e taxa de suicídio, realizamos o teste t para correlação de Pearson. O gráfico abaixo ilustra a distribuição t sob H₀ e o valor t observado, t_obs ≈ 4,43 (n = 11 anos, graus de liberdade = 9):
+
+- **H₀:** ρ (correlação populacional) = 0  
+- **t_obs:** 4,43  
+- **df:** 9  
+- **Região crítica (α = 0,05, bicaudal):** |t| > 2,262  
+
+Como t_obs = 4,43 está muito à direita da curva (fora da região de não-rejeição), rejeitamos H₀. A correlação r ≈ 0,86 é estatisticamente significativa (p < 0,001).
+
+**Interpretação prática:**  
+O valor t_obs = 4,43 e a região crítica triangular pintada em vermelho confirmam que a correlação não é fruto do acaso. Na prática, isso significa que políticas que afetem o nível de desemprego terão efeitos mensuráveis sobre a taxa de suicídio — um dado que não pode ser ignorado em decisões de governo. O gráfico deixa claro que o padrão de associação observado não é aleatório, mas sim reflexo de uma relação real e robusta.
+
+### Teste t de Diferença entre Taxas de Suicídio de Homens e Mulheres
+
+Para verificar se as médias de suicídio de homens e de mulheres diferem significativamente (2013–2023), usamos o teste t de Student (Welch):
+
+1. **H₀:** μ_homens = μ_mulheres  
+2. **t_obs:** ≈ 34,26  
+3. **Graus de liberdade (Welch):** ≈ 17  
+4. **Região crítica (α = 0,05, bicaudal):** |t| > 2,110  
+
+Como t_obs = 34,26 está muito acima de 2,110, rejeitamos H₀.
+
+**Interpretação prática:**  
+Essa diferença altíssima entre as médias (homens ~10,6 por 100 mil vs. mulheres ~3,6 por 100 mil) mostra que o risco de suicídio para homens é estatisticamente e expressivamente maior do que para mulheres. Na prática, significa que qualquer programa de prevenção deve priorizar estratégias específicas para cada gênero, pois fatores culturais, sociais e psicológicos impactam muito mais o público masculino.
+
 ---
 
 ## Conclusão
 
 A análise exploratória realizada confirma que, no período estudado, **as crises econômicas brasileiras estiveram fortemente associadas ao aumento da taxa de suicídio**.  
 - Enquanto a taxa global de suicídio diminuiu de forma quase contínua entre 2000–2021, o Brasil apresentou trajetória oposta após 2010, saltando de 4,7 para 7,0 por 100 mil habitantes.  
-- O **desemprego** mostrou‐se o **principal preditor** de suicídio (correlação r ≈ +0,86), seguido pelo **PIB per capita** (r ≈ –0,68). Já a inflação revelou‐se pouco relevante para explicar variações na taxa de suicídio.  
-- A **recessão de 2015–2016** elevou o desemprego para quase 13% em 2017, momento em que a taxa de suicídio ultrapassou 6,5 por 100 mil, mesmo com leve recuperação de PIB, evidenciando defasagem do mercado de trabalho.  
-- O **choque pandêmico de 2020** aprofundou o cenário: PIB per capita caiu para US$ 7 100 e desemprego bateu 13,7%, gerando aumento adicional de suicídios que foi **maior do que o previsto apenas pelos indicadores econômicos**, revelando impactos sociopsicológicos extraeconômicos (isolamento, luto coletivo).  
-- Em **2022–2023**, embora o PIB per capita tenha se recuperado (US$ 10 250) e o desemprego retornado a valores baixos (~7,9%), a taxa de suicídio permaneceu elevada (~6,3–6,4), indicando que os efeitos sobre a saúde mental persistem por anos após a crise.
+- O **desemprego** mostrou‐se o **principal preditor** de suicídio (correlação r ≈ +0,86, p < 0,001), seguido pelo **PIB per capita** (r ≈ –0,68, p < 0,01). Já a inflação revelou‐se pouco relevante para explicar variações na taxa de suicídio (r ≈ –0,22).  
+  - O teste t confirmatório mostrou t_obs ≈ 4,43 (df = 9), bem acima do limite crítico (±2,262), reforçando que essa correlação não se deve ao acaso, mas reflete uma relação estatisticamente significativa entre desemprego e suicídio.  
+- A **recessão de 2015–2016** elevou o desemprego para quase 13% em 2017, momento em que a taxa de suicídio ultrapassou 6,5 por 100 mil, mesmo com leve recuperação de PIB, evidenciando defasagem do mercado de trabalho e efeito tardio na saúde mental.  
+- O **choque pandêmico de 2020** aprofundou o cenário: PIB per capita caiu para US$ 7 100 e desemprego bateu 13,7%, gerando aumento adicional de suicídios que foi **maior do que o previsto apenas pelos indicadores econômicos**—um sinal de impactos sociopsicológicos extraeconômicos (isolamento, luto coletivo).  
+- Em **2022–2023**, embora o PIB per capita tenha se recuperado (US$ 10 250) e o desemprego retornado a valores baixos (~7,9%), a taxa de suicídio permaneceu elevada (~6,3–6,4), indicando que os efeitos sobre a saúde mental persistem por anos após a crise.  
+- Comparando gêneros, comprovamos por meio de teste t (t_obs ≈ 34,26, df ≈ 17, valor crítico ±2,110) que a diferença entre a média anual de suicídio dos **homens (~10,6 por 100 mil)** e das **mulheres (~3,6 por 100 mil)** é estatisticamente significativa (p < 0,001). Na prática, isso reforça a necessidade de políticas de prevenção específicas para cada gênero, visto que o risco masculino é muito superior.  
+- Finalmente, a modelagem ARIMA(1,3,1) projetou **7,34 suicídios por 100 mil em 2022** e **7,83 em 2023**, sugerindo que, sem intervenções estruturais, a taxa continuará em trajetória de alta, embora em ritmo levemente mais lento comparado a 2020–2021.
 
 **Pesquisa futura e limitações**  
 - **Dados anuais** limitam a captação de variações sazonais (picos de inverno, datas comemorativas). Dados mensais ou trimestrais seriam ideais para modelagem mais precisa.  
@@ -142,6 +214,10 @@ A análise exploratória realizada confirma que, no período estudado, **as cris
 - Análises de machine learning (random forest, XGBoost) e clusterização para mapear municípios de alto risco e recomendar intervenções localizadas.
 
 ---
+
+## Datafólio
+
+![datafolio](C:\Users\User\Desktop\imt-db\imtcd-saude-mental-economia\datafolio-png.png)
 
 ## Referências
 
