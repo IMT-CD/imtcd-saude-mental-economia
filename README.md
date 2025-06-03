@@ -23,6 +23,13 @@
 
 ---
 
+## Link para o Colab
+
+Para visualizar e executar o notebook diretamente no Google Colab, acesse:  
+[saúde_mental_economia.ipynb no Colab](https://colab.research.google.com/github/ViniciusBerti/20241_maua_ecm252_intro_git/blob/main/saude_mental_economia.ipynb)
+
+---
+
 ## Introdução
 
 Crises econômicas têm impactos que vão muito além de indicadores como PIB ou inflação. Elas afetam diretamente a vida das pessoas, e esse reflexo também aparece na saúde mental da população. O suicídio, infelizmente, é um dos indicadores mais extremos desse sofrimento.
@@ -218,6 +225,8 @@ A análise exploratória realizada confirma que, no período estudado, **as cris
 ## Datafólio
 
 ![datafolio](datafolio-png.png)
+
+---
 
 ## Referências
 
