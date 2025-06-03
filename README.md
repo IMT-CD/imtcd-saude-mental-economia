@@ -126,7 +126,7 @@ Investigar a relação entre variáveis econômicas — como desemprego e PIB pe
   - pib_per_capita × suicídio_total = –0,68  
   - inflacao × suicídio_total = –0,22 (quase nulo)  
 
-### Visão 13 – Modelagem de Séries Temporais: previsão da taxa de suicídio (2000–2023)
+### Modelagem de Séries Temporais: previsão da taxa de suicídio (2000–2023)
 
 Para projetar a evolução futura da taxa de suicídio no Brasil, aplicamos uma modelagem ARIMA sobre a série anual de 2000 a 2021:
 
@@ -156,7 +156,7 @@ Para projetar a evolução futura da taxa de suicídio no Brasil, aplicamos uma 
      - **2023:** 7,83 suicídios por 100 mil habitantes  
    - A projeção indica que a tendência de alta persiste, porém com desaceleração em relação ao forte crescimento observado em 2020–2021.
 
-### Visão 14 – Teste de Correlação de Pearson (Desemprego × Suicídio)
+### Teste de Correlação de Pearson (Desemprego × Suicídio)
 
 Aplicamos `pearsonr` para medir a associação entre desemprego (%) e taxa de suicídio (por 100 mil habitantes) no Brasil (2013–2023). Após alinhar as séries e remover valores ausentes, obtivemos:
 
