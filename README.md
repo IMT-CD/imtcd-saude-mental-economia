@@ -1,7 +1,8 @@
 # Projeto de Análise Exploratória de Dados (EDA)
 
 ## Sumário
-
+- [Link para o Colab](#link-para-o-colab)
+- [Vídeo do projeto](#vídeo-do-projeto)
 - [Introdução](#introdução)  
 - [Objetivo](#objetivo)  
 - [Fontes de Dados](#fontes-de-dados)  
@@ -27,6 +28,13 @@
 
 Para visualizar e executar o notebook diretamente no Google Colab, acesse:  
 [saúde_mental_economia.ipynb no Colab](https://colab.research.google.com/github/ViniciusBerti/20241_maua_ecm252_intro_git/blob/main/saude_mental_economia.ipynb)
+
+---
+
+## Vídeo do Projeto
+
+Assista à apresentação completa no YouTube:  
+[https://youtu.be/3aCso8jSszo](https://youtu.be/3aCso8jSszo)
 
 ---
 
