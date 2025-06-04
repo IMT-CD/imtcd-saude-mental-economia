@@ -110,38 +110,60 @@ Investigar a relação entre variáveis econômicas — como desemprego e PIB pe
 ### Evolução da taxa de suicídio no Brasil por sexo (2000–2021)
 - Homens passaram de 7,7 para 10,7 por 100 mil, e mulheres de 1,9 para 3,6. A razão homem:mulher caiu de ~4:1 para ~3:1, indicando maior crescimento relativo para o público feminino.
 
+![grafico 2](assets/grafico-2.png)
+
 ### Evolução da taxa de desemprego no Brasil (2013–2023)
 - Desemprego caiu de 7,1% (2013) para 6,8% (2014), subiu a 12,8% (2017) pela recessão de 2015–2016, atingiu 13,7% em 2020 (pandemia) e recuou para 7,9% em 2023.
+
+![grafico 3](assets/grafico-3.png)
 
 ### Desemprego × PIB per capita no Brasil (2013–2023)
 - Apesar de PIB per capita recuperar‐se em 2017 (US$ 10 350), o desemprego permaneceu alto (~12,8%), evidenciando defasagem. Em 2020, PIB caiu para US$ 7 100 e desemprego saltou a 13,7%. De 2021 a 2023, PIB voltou a US$ 10 250 e desemprego caiu para 7,9%.
 
+![grafico 4](assets/grafico-4.png)
+
 ### Relação entre PIB per capita e Desemprego (2013–2023)
 - Correlação negativa forte (r ≈ –0,85): anos como 2017 e 2020 destacam‐se por defasagens e choques simultâneos. Em 2020, o ponto “PIB baixo, desemprego alto” foi extremo.
+
+![grafico 5](assets/grafico-5.png)
 
 ### Evolução da taxa de suicídio mundial (2013–2023)
 - A taxa mundial caiu de ~10,12 para 8,89 entre 2013 e 2020, com leve alta a 8,90 em 2021. O Brasil seguiu trajetória oposta, reforçando que fatores internos pesaram mais que as tendências globais.
 
+![grafico 6](assets/grafico-6.png)
+
 ### Taxa de suicídio no Brasil por sexo (2013–2023)
 - Homens: 8,9 → 10,6; mulheres: 2,6 → 3,6. A razão caiu de ~3,4:1 para ~3:1. Mesmo após 2021, a taxa feminina continuou em alta, refletindo sobrecarga e vulnerabilidades específicas.
+
+![grafico 7](assets/grafico-7.png)
 
 ### Taxa de desemprego no Brasil (2013–2023)
 - Reforça o pico de 13,7% em 2020 e a rápida recuperação a 7,9% em 2023, em contraste com a defasagem pós‐2015, quando o desemprego permaneceu alto mesmo com leve recuperação de PIB.
 
+![grafico 8](assets/grafico-8.png)
+
 ### Desemprego × PIB per capita no Brasil (2013–2023)
 - Confirma correlação inversa (r ≈ –0,82). Em 2017, PIB subiu a US$ 10 350 e desemprego manteve‐se alto, mostrando defasagem. Em 2020, choques simultâneos de PIB e desemprego reforçam correlação quase instantânea.
+
+![grafico 9](assets/grafico-9.png)
 
 ### Correlação – Desemprego vs. Taxa de suicídio (2013–2023)
 - Correlação positiva forte (r ≈ +0,86). Em 2017 e 2021, a taxa de suicídio ficou acima do valor previsto pelo desemprego, indicando efeitos adicionais (recessão prolongada, pandemia).
 
+![grafico 10](assets/grafico-10.png)
+
 ### Correlação – PIB per capita vs. Taxa de suicídio (2013–2023)
 - Correlação negativa moderada (r ≈ –0,68). Em 2017 e 2020–2021, a taxa de suicídio superou o valor previsto apenas pelo PIB, destacando impactos sociopsicológicos extraeconômicos.
+
+![grafico 11](assets/grafico-11.png)
 
 ### Matriz de correlação (2013–2023)
 - Principais correlações:  
   - desemprego × suicídio_total = +0,86  
   - pib_per_capita × suicídio_total = –0,68  
-  - inflacao × suicídio_total = –0,22 (quase nulo)  
+  - inflacao × suicídio_total = –0,22 (quase nulo)
+
+![grafico 12](assets/grafico-12.png)
 
 ### Modelagem de Séries Temporais: previsão da taxa de suicídio (2000–2023)
 
@@ -173,6 +195,8 @@ Para projetar a evolução futura da taxa de suicídio no Brasil, aplicamos uma 
      - **2023:** 7,83 suicídios por 100 mil habitantes  
    - A projeção indica que a tendência de alta persiste, porém com desaceleração em relação ao forte crescimento observado em 2020–2021.
 
+![grafico 13](assets/grafico-13-previsao.png)
+
 ### Teste de Correlação de Pearson (Desemprego × Suicídio)
 
 Aplicamos `pearsonr` para medir a associação entre desemprego (%) e taxa de suicídio (por 100 mil habitantes) no Brasil (2013–2023). Após alinhar as séries e remover valores ausentes, obtivemos:
@@ -182,6 +206,8 @@ Aplicamos `pearsonr` para medir a associação entre desemprego (%) e taxa de su
 
 **Interpretação prática:**  
 Essa correlação positiva forte significa que, no período analisado, sempre que a taxa de desemprego subiu, a taxa de suicídio também aumentou. Em termos concretos, anos com desemprego acima de 12% (2016–2017, 2020) coincidiram com picos na taxa de suicídio. Assim, medidas que influenciam o desemprego tendem a ter impacto direto na saúde mental da população, elevando o risco de suicídio em períodos de crise.
+
+![grafico 14](assets/grafico-14-pearson.png)
 
 ### Teste de Hipótese para a Correlação de Pearson (Visualização)
 
@@ -197,6 +223,8 @@ Como t_obs = 4,43 está muito à direita da curva (fora da região de não-rejei
 **Interpretação prática:**  
 O valor t_obs = 4,43 e a região crítica triangular pintada em vermelho confirmam que a correlação não é fruto do acaso. Na prática, isso significa que políticas que afetem o nível de desemprego terão efeitos mensuráveis sobre a taxa de suicídio — um dado que não pode ser ignorado em decisões de governo. O gráfico deixa claro que o padrão de associação observado não é aleatório, mas sim reflexo de uma relação real e robusta.
 
+![grafico 14](assets/grafico-14-pearson.png)
+
 ### Teste t de Diferença entre Taxas de Suicídio de Homens e Mulheres
 
 Para verificar se as médias de suicídio de homens e de mulheres diferem significativamente (2013–2023), usamos o teste t de Student (Welch):
@@ -210,6 +238,8 @@ Como t_obs = 34,26 está muito acima de 2,110, rejeitamos H₀.
 
 **Interpretação prática:**  
 Essa diferença altíssima entre as médias (homens ~10,6 por 100 mil vs. mulheres ~3,6 por 100 mil) mostra que o risco de suicídio para homens é estatisticamente e expressivamente maior do que para mulheres. Na prática, significa que qualquer programa de prevenção deve priorizar estratégias específicas para cada gênero, pois fatores culturais, sociais e psicológicos impactam muito mais o público masculino.
+
+![grafico 15](assets/grafico-15-ttest.png)
 
 ---
 
