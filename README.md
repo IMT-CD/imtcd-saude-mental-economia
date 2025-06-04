@@ -9,6 +9,7 @@
 - [Metodologia](#metodologia)  
 - [Desenvolvimento](#desenvolvimento)  
 - [Conclusão](#conclusão)  
+- [Perguntas e respostas](#perguntas-e-respostas)
 - [Datafólio](#datafólio)
 - [Referências](#referências)  
 
@@ -257,6 +258,28 @@ A análise exploratória realizada confirma que, no período estudado, **as cris
 - **Dados anuais** limitam a captação de variações sazonais (picos de inverno, datas comemorativas). Dados mensais ou trimestrais seriam ideais para modelagem mais precisa.  
 - Incluir variáveis adicionais em modelos múltiplos (índice de violência, uso de álcool/drogas, acesso a CAPS, nível de escolaridade) para identificar determinantes sociais e comportamentais.  
 - Análises de machine learning (random forest, XGBoost) e clusterização para mapear municípios de alto risco e recomendar intervenções localizadas.
+
+---
+
+## Perguntas e respostas
+
+1. **A inflação tem impacto direto na taxa de suicídio no Brasil?**  
+   Sim, o projeto identificou uma **correlação positiva** entre inflação e taxa de suicídio.
+
+2. **A taxa de suicídio no Brasil está aumentando com o passar dos anos?**  
+   Sim, observou-se uma **tendência de crescimento** ao longo do tempo.
+
+3. **A taxa de suicídio no mundo segue uma tendência de crescimento?**  
+   **Não.** Globalmente, a taxa de suicídio **tem diminuído** nos últimos anos.
+
+4. **Há uma correlação entre o aumento do desemprego e os casos de suicídio?**  
+   Sim, o desemprego mostrou **forte correlação** com o aumento dos casos de suicídio.
+
+5. **Variações no PIB influenciam os índices de suicídio?**  
+   Sim, o projeto identificou que **PIB mais baixo** está relacionado a **índices mais altos de suicídio**.
+
+6. **Os dados indicam que a taxa de suicídio tende a aumentar nos próximos anos?**  
+   Sim, a análise preditiva indicou uma **possível tendência de alta** no Brasil, se fatores econômicos não melhorarem.
 
 ---
 
