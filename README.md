@@ -105,6 +105,8 @@ Investigar a relação entre variáveis econômicas — como desemprego e PIB pe
 ### Evolução da taxa de suicídio – Global vs. Brasil (2000–2021)
 - Enquanto a média global caiu de 13,7 para 8,9 por 100 mil habitantes, o Brasil subiu de 4,7 para 7,0 no mesmo período. O ponto de inflexão ocorreu em 2014–2015, vinculando‐se à recessão econômica.
 
+![grafico 1](assets/grafico-1.png)
+
 ### Evolução da taxa de suicídio no Brasil por sexo (2000–2021)
 - Homens passaram de 7,7 para 10,7 por 100 mil, e mulheres de 1,9 para 3,6. A razão homem:mulher caiu de ~4:1 para ~3:1, indicando maior crescimento relativo para o público feminino.
 
