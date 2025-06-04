@@ -264,7 +264,7 @@ A análise exploratória realizada confirma que, no período estudado, **as cris
 ## Perguntas e respostas
 
 1. **A inflação tem impacto direto na taxa de suicídio no Brasil?**  
-   Sim, o projeto identificou uma **correlação positiva** entre inflação e taxa de suicídio.
+   Não, o projeto identificou uma **correlação negativa** entre inflação e taxa de suicídio.
 
 2. **A taxa de suicídio no Brasil está aumentando com o passar dos anos?**  
    Sim, observou-se uma **tendência de crescimento** ao longo do tempo.
