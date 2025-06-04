@@ -207,8 +207,6 @@ Aplicamos `pearsonr` para medir a associação entre desemprego (%) e taxa de su
 **Interpretação prática:**  
 Essa correlação positiva forte significa que, no período analisado, sempre que a taxa de desemprego subiu, a taxa de suicídio também aumentou. Em termos concretos, anos com desemprego acima de 12% (2016–2017, 2020) coincidiram com picos na taxa de suicídio. Assim, medidas que influenciam o desemprego tendem a ter impacto direto na saúde mental da população, elevando o risco de suicídio em períodos de crise.
 
-![grafico 14](assets/grafico-14-pearson.png)
-
 ### Teste de Hipótese para a Correlação de Pearson (Visualização)
 
 Para confirmar estatisticamente a associação entre desemprego e taxa de suicídio, realizamos o teste t para correlação de Pearson. O gráfico abaixo ilustra a distribuição t sob H₀ e o valor t observado, t_obs ≈ 4,43 (n = 11 anos, graus de liberdade = 9):
