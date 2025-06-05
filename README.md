@@ -53,7 +53,14 @@ Por que escolhemos este tema? Porque acreditamos que políticas econômicas deve
 
 ## Objetivo
 
-Investigar a relação entre variáveis econômicas — como desemprego e PIB per capita — e a taxa de suicídio no Brasil entre 2013 e 2021 (último ano com dados disponíveis). Através de uma análise exploratória rigorosa e visualmente clara, buscamos evidenciar os efeitos sociais das crises econômicas sobre a saúde mental da população.
+Investigar a relação entre variáveis econômicas — como desemprego e PIB per capita — e a taxa de suicídio no Brasil entre 2013 e 2021 (último ano com dados disponíveis). Através de uma análise exploratória rigorosa e visualmente clara, buscamos evidenciar os efeitos sociais das crises econômicas sobre a saúde mental da população. Além disso, temos como objetivo responder às seguintes seis perguntas-chave:
+
+1. **A inflação tem impacto direto na taxa de suicídio no Brasil?**  
+2. **A taxa de suicídio no Brasil está aumentando com o passar dos anos?**  
+3. **A taxa de suicídio no mundo segue uma tendência de crescimento?**  
+4. **Há uma correlação entre o aumento do desemprego e os casos de suicídio?**  
+5. **Variações no PIB influenciam os índices de suicídio?**  
+6. **Os dados indicam que a taxa de suicídio tende a aumentar nos próximos anos?**
 
 ---
 
