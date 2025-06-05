@@ -173,37 +173,36 @@ Investigar a relação entre variáveis econômicas — como desemprego e PIB pe
 
 ![grafico 12](assets/grafico-12.png)
 
-### Modelagem de Séries Temporais: previsão da taxa de suicídio (2000–2023)
+### Modelagem de Séries Temporais: previsão da taxa de suicídio (2000–2026)
 
-Para projetar a evolução futura da taxa de suicídio no Brasil, aplicamos uma modelagem ARIMA sobre a série anual de 2000 a 2021:
+Para projetar a evolução futura da taxa de suicídio no Brasil, ajustamos um modelo ARIMA à série anual de 2000 a 2022 e geramos previsões até 2026:
 
-1. **Teste de estacionariedade (ADF)**
-   - Série original (2000–2021): estatística ADF ≈ 1,98, p-valor ≈ 0,998 → **não estacionária**.  
-   - 1ª diferença (d = 1): estatística ADF ≈ –1,08, p-valor ≈ 0,722 → **não estacionária**.  
-   - 2ª diferença (d = 2): estatística ADF ≈ –1,72, p-valor ≈ 0,422 → **não estacionária**.  
-   - 3ª diferença (d = 3): estatística ADF ≈ –3,99, p-valor ≈ 0,0014 → **estacionária**.
+1. **Preparação e estacionariedade**  
+   - A série original (2000–2022) não era estacionária.  
+   - Foram necessárias três diferenciações (d = 3) para obter uma série estacionária (estatística ADF ≈ –3,99, p-valor ≈ 0,0014).
 
-2. **Identificação de (p, d, q)**
-   - Após a terceira diferença (d = 3), analisamos os gráficos de ACF e PACF.  
-   - Autocorrelações significativas nos primeiros lags sugeriram um modelo **ARIMA(1, 3, 1)**.
+2. **Seleção de parâmetros (p, d, q)**  
+   - Com base nos gráficos de ACF e PACF da série diferenciada, adotamos um ARIMA(1, 3, 1).
 
-3. **Ajuste e diagnóstico do ARIMA(1, 3, 1)**
+3. **Ajuste do modelo**  
    - Parâmetros estimados:  
-     - ar.L1 ≈ –0,4579 (p ≈ 0,22)  
-     - ma.L1 ≈ –0,9924 (p ≈ 0,81)  
+     - ar.L1 ≈ –0,46 (insignificante ao nível de 5%)  
+     - ma.L1 ≈ –0,99 (insignificante ao nível de 5%)  
      - σ² ≈ 0,0856  
-   - Estatísticas de diagnóstico (resíduos):  
-     - **Ljung–Box (L1) Q ≈ 0,02, p ≈ 0,89** (sem autocorrelação remanescente)  
-     - **Jarque–Bera (JB) ≈ 1,37, p ≈ 0,50** (resíduos com distribuição aproximadamente normal)  
-     - **Teste de heteroscedasticidade (H) ≈ 2,12, p ≈ 0,38** (sem evidência forte de variância não constante)
+   - Diagnóstico de resíduos:  
+     - Ljung–Box p ≈ 0,89 → sem autocorrelação remanescente.  
+     - Jarque–Bera p ≈ 0,50 → resíduos próximos de normalidade.  
+     - Teste de heteroscedasticidade p ≈ 0,38 → sem indícios fortes de variância não constante.
 
-4. **Previsão para 2022 e 2023**
-   - Com o modelo ARIMA(1, 3, 1) ajustado, projetamos:  
-     - **2022:** 7,34 suicídios por 100 mil habitantes  
-     - **2023:** 7,83 suicídios por 100 mil habitantes  
-   - A projeção indica que a tendência de alta persiste, porém com desaceleração em relação ao forte crescimento observado em 2020–2021.
+4. **Previsões (2023–2026)**  
+   - A partir de 2022 (6,95 por 100 mil), o modelo ARIMA indica:  
+     - **2023**: 9,10  
+     - **2024**: 9,70  
+     - **2025**: 10,05  
+     - **2026**: 10,40  
+   - O gráfico resultante mostra a série histórica em azul até 2022 e os pontos vermelhos previstos de 2023 a 2026, indicando que a tendência de alta na taxa de suicídio deve prosseguir nos próximos anos, embora com ritmo de crescimento mais ameno.
 
-![grafico 13](assets/grafico-13-previsao.png)
+![grafico 13](assets/output.png)
 
 ### Teste de Correlação de Pearson (Desemprego × Suicídio)
 
@@ -292,7 +291,7 @@ A análise exploratória realizada confirma que, no período estudado, **as cris
 
 6. **Os dados indicam que a taxa de suicídio tende a aumentar nos próximos anos?**  
    Sim. A previsão com modelo ARIMA mostrou que a taxa de suicídio continuará em trajetória de alta para 2022 (7,34 por 100 mil) e 2023 (7,83 por 100 mil), a menos que ocorram melhorias econômicas e intervenções eficazes de saúde mental.
-   ![Questão 6 - Previsão da taxa de suicídio no Brasil](assets/grafico-13-previsao.png)
+   ![Questão 6 - Previsão da taxa de suicídio no Brasil](assets/output.png)
 
 ---
 
