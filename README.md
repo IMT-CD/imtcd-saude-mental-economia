@@ -290,7 +290,13 @@ A análise exploratória realizada confirma que, no período estudado, **as cris
    ![Questão 5 - Correlação entre pib e taxa de suicídio](assets/grafico-11.png)
 
 6. **Os dados indicam que a taxa de suicídio tende a aumentar nos próximos anos?**  
-   Sim. A previsão com modelo ARIMA mostrou que a taxa de suicídio continuará em trajetória de alta para 2022 (7,34 por 100 mil) e 2023 (7,83 por 100 mil), a menos que ocorram melhorias econômicas e intervenções eficazes de saúde mental.
+   Sim. A previsão com modelo ARIMA estimou que a taxa de suicídio continuará em elevação, partindo de 6,95 por 100 mil habitantes em 2022 para:  
+  - **2023:** 9,10 por 100 mil hab.  
+  - **2024:** 9,70 por 100 mil hab.  
+  - **2025:** 10,05 por 100 mil hab.  
+  - **2026:** 10,40 por 100 mil hab.  
+
+  Esse cenário só será revertido se ocorrerem melhorias econômicas consistentes e intervenções eficazes de saúde mental.
    ![Questão 6 - Previsão da taxa de suicídio no Brasil](assets/output.png)
 
 ---
