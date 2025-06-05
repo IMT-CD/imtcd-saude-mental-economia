@@ -265,21 +265,27 @@ A análise exploratória realizada confirma que, no período estudado, **as cris
 
 1. **A inflação tem impacto direto na taxa de suicídio no Brasil?**  
    Não, o projeto identificou uma **correlação negativa** entre inflação e taxa de suicídio.
+   ![Questão 1 - Correlação entre inflação e taxa de suicídio](assets/grafico-12.png)
 
 2. **A taxa de suicídio no Brasil está aumentando com o passar dos anos?**  
    Sim, observou-se uma **tendência de crescimento** ao longo do tempo.
+   ![Questão 2 - Taxa de suicídio no Brasil evolução](assets/grafico-2.png)
 
 3. **A taxa de suicídio no mundo segue uma tendência de crescimento?**  
    **Não.** Globalmente, a taxa de suicídio **tem diminuído** nos últimos anos.
+   ![Questão 3 - Taxa de suicídio mundial](assets/grafico-1.png)
 
 4. **Há uma correlação entre o aumento do desemprego e os casos de suicídio?**  
    Sim, o desemprego mostrou **forte correlação** com o aumento dos casos de suicídio.
+   ![Questão 4 - Correlação entre desemprego e taxa de suicídio](assets/grafico-10.png)
 
 5. **Variações no PIB influenciam os índices de suicídio?**  
    Sim, o projeto identificou que **PIB mais baixo** está relacionado a **índices mais altos de suicídio**.
+   ![Questão 5 - Correlação entre pib e taxa de suicídio](assets/grafico-11.png)
 
 6. **Os dados indicam que a taxa de suicídio tende a aumentar nos próximos anos?**  
    Sim, a análise preditiva indicou uma **possível tendência de alta** no Brasil, se fatores econômicos não melhorarem.
+   ![Questão 6 - Previsão da taxa de suicídio no Brasil](assets/grafico-13-previsao.png)
 
 ---
 
