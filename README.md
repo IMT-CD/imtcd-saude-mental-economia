@@ -264,27 +264,27 @@ A análise exploratória realizada confirma que, no período estudado, **as cris
 ## Perguntas e respostas
 
 1. **A inflação tem impacto direto na taxa de suicídio no Brasil?**  
-   Não, o projeto identificou uma **correlação negativa** entre inflação e taxa de suicídio.
+   Não. A análise mostrou uma correlação negativa muito fraca entre inflação e taxa de suicídio, indicando que a inflação não exerce um efeito significativo sobre os casos de suicídio no país.
    ![Questão 1 - Correlação entre inflação e taxa de suicídio](assets/grafico-12.png)
 
 2. **A taxa de suicídio no Brasil está aumentando com o passar dos anos?**  
-   Sim, observou-se uma **tendência de crescimento** ao longo do tempo.
+   Sim. Há uma tendência clara de crescimento da taxa de suicídio no Brasil ao longo de todos os anos analisados. Esse aumento é consistente e persistente, não se limitando a flutuações pontuais.
    ![Questão 2 - Taxa de suicídio no Brasil evolução](assets/grafico-2.png)
 
 3. **A taxa de suicídio no mundo segue uma tendência de crescimento?**  
-   **Não.** Globalmente, a taxa de suicídio **tem diminuído** nos últimos anos.
+   Não. Ao contrário do Brasil, a taxa global de suicídio vem caindo de forma contínua nos últimos anos, passando de aproximadamente 13,7 para 8,9 por 100 mil habitantes entre 2000 e 2021.
    ![Questão 3 - Taxa de suicídio mundial](assets/grafico-1.png)
 
 4. **Há uma correlação entre o aumento do desemprego e os casos de suicídio?**  
-   Sim, o desemprego mostrou **forte correlação** com o aumento dos casos de suicídio.
+   Sim. O desemprego apresentou uma correlação extremamente forte (r ≈ +0,86) com a taxa de suicídio, confirmada estatisticamente por testes de hipótese. Anos de desemprego elevado coincidem diretamente com picos de suicídio, especialmente em 2017 e 2020–2021.
    ![Questão 4 - Correlação entre desemprego e taxa de suicídio](assets/grafico-10.png)
 
 5. **Variações no PIB influenciam os índices de suicídio?**  
-   Sim, o projeto identificou que **PIB mais baixo** está relacionado a **índices mais altos de suicídio**.
+   Sim. O PIB per capita mostrou uma correlação negativa moderada (r ≈ –0,68) com a taxa de suicídio: quando o PIB cai, a incidência de suicídios tende a aumentar. Em momentos de crise econômica (2017 e 2020), mesmo com leve recuperação do PIB, o suicídio permaneceu acima do esperado, indicando impactos socioemocionais profundos..
    ![Questão 5 - Correlação entre pib e taxa de suicídio](assets/grafico-11.png)
 
 6. **Os dados indicam que a taxa de suicídio tende a aumentar nos próximos anos?**  
-   Sim, a análise preditiva indicou uma **possível tendência de alta** no Brasil, se fatores econômicos não melhorarem.
+   Sim. A previsão com modelo ARIMA mostrou que a taxa de suicídio continuará em trajetória de alta para 2022 (7,34 por 100 mil) e 2023 (7,83 por 100 mil), a menos que ocorram melhorias econômicas e intervenções eficazes de saúde mental.
    ![Questão 6 - Previsão da taxa de suicídio no Brasil](assets/grafico-13-previsao.png)
 
 ---
